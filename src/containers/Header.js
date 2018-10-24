@@ -1,12 +1,26 @@
 import React, { Component } from 'react';
+import './Header.css';
+import SearchBar from './searchBar';
 
 class Header extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
   render() {
-    return <div>Header</div>;
+    return (
+      <div className="header-container">
+        <nav className="topChrome-primary">
+          {/* <button>Menu</button> */}
+          <span className="navbar-brand">RedditLite</span>
+          <ul className="pull-right">
+            <span className="profile-menu">
+              <button>Profile</button>
+            </span>
+          </ul>
+        </nav>
+        <div className="topChrome-secondary">
+          {' '}
+          <SearchBar onChange={this.props.onChange} />
+        </div>
+      </div>
+    );
   }
 }
 

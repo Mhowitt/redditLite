@@ -1,24 +1,44 @@
 import React, { Component } from 'react';
-import axios from 'axios';
+import { apiCall } from '../apiCalls.js';
+import PostsList from './PostsList';
+import Header from './Header';
+import './MainLayout.css';
 
 class MainLayout extends Component {
   constructor(props) {
     super(props);
-    this.state = { posts: null };
+    this.state = { posts: null, searchTerm: '' };
   }
 
   componentDidMount = () => {
-    axios
-      .get('https://www.reddit.com/r/popular/top.json?limit=25')
-      .then(data => data)
-      .then(postsData => this.renderPosts(postsData.data));
+    this.renderPosts('popular');
+  };
+
+  handleSearchTerm = value => {
+    this.setState({ ...this.state, searchTerm: value });
   };
 
   renderPosts = data => {
-    this.setState({ posts: data });
+    apiCall('popular').then(newData => {
+      let posts = newData.postData;
+      this.setState({ posts });
+    });
   };
   render() {
-    return <div>Posts</div>;
+    return (
+      <div style={{ width: '100%' }}>
+        <Header onChange={this.handleSearchTerm} />
+
+        <div className="main-layout">
+          <div className="flex-column side-content">Column 1</div>
+          <div className="flex-column main-content">
+            <PostsList
+              posts={this.state.posts ? this.state.posts.children : []}
+            />
+          </div>
+        </div>
+      </div>
+    );
   }
 }
 

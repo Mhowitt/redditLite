@@ -8,8 +8,6 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-          <Header />
-
           <Route exact path="/" component={MainLayout} />
         </div>
       </Router>

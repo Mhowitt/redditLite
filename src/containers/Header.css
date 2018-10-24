@@ -1,0 +1,56 @@
+.header-container {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+}
+
+.topChrome-primary {
+  background-color: darkblue;
+  height: 60px;
+  width: 100%;
+
+  /* bootstrap 4 .navbar .navbar-top-fixed */
+  padding: 12px 20px;
+  position: relative;
+  right: 0px;
+  left: 0px;
+  z-index: 1030;
+  display: block;
+  box-sizing: border-box;
+}
+
+.topChrome-secondary {
+  display: flex;
+  justify-content: center;
+  padding: 10px 20px;
+  background-color: #eeeeee;
+}
+
+.navbar-brand {
+  color: #f2f2f2;
+  position: absolute;
+  margin-left: 10%;
+  left: 0;
+  text-align: center;
+  text-transform: uppercase;
+  width: 80%;
+  margin-right: 10%;
+  top: 0;
+  padding-top: 16px;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 1.8px;
+  line-height: 21px;
+  height: 60px;
+}
+
+/* advent-navbar right side menus */
+.pull-right {
+  float: right;
+}
+
+.profile-menu {
+  min-width: 120px;
+  width: 120px;
+  margin-left: -85px;
+}
