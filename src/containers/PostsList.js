@@ -9,12 +9,15 @@ export default class PostsList extends Component {
   // }
 
   render() {
-    const { posts } = this.props;
+    const { posts, page } = this.props;
     return (
       <div className="list-container">
-        {posts.map((post, idx) => (
-          <PostListItem key={idx} post={post} />
-        ))}
+        <div>
+          <div className="page-title">{page}</div>
+          {posts.map((post, idx) => (
+            <PostListItem key={idx} post={post} />
+          ))}
+        </div>
       </div>
     );
   }

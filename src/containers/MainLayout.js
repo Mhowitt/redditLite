@@ -3,6 +3,7 @@ import { apiCall } from '../apiCalls.js';
 import PostsList from './PostsList';
 import Header from './Header';
 import './MainLayout.css';
+//setTimeout to be called here?
 
 class MainLayout extends Component {
   constructor(props) {
@@ -11,7 +12,10 @@ class MainLayout extends Component {
   }
 
   componentDidMount = () => {
-    this.renderPosts('popular');
+    const searchSubReddit = this.props.match.params
+      ? this.props.match.params.redditName
+      : 'popular';
+    this.renderPosts(searchSubReddit);
   };
 
   handleSearchTerm = value => {
@@ -19,8 +23,8 @@ class MainLayout extends Component {
   };
 
   renderPosts = data => {
-    apiCall('popular').then(newData => {
-      let posts = newData.postData;
+    apiCall(data).then(newData => {
+      let posts = newData;
       this.setState({ posts });
     });
   };
@@ -33,7 +37,12 @@ class MainLayout extends Component {
           <div className="flex-column side-content">Column 1</div>
           <div className="flex-column main-content">
             <PostsList
-              posts={this.state.posts ? this.state.posts.children : []}
+              posts={this.state.posts ? this.state.posts : []}
+              page={
+                this.props.match.params
+                  ? this.props.match.params.redditName
+                  : 'Homepage'
+              }
             />
           </div>
         </div>

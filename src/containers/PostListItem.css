@@ -4,4 +4,16 @@
   border-bottom: 1px solid #bfbfbf;
   height: 100px;
   font-size: 12px;
+  position: relative;
+}
+
+.upper-half-post {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.posted-date {
+  position: absolute;
+  right: 0;
 }

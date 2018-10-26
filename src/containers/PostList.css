@@ -2,3 +2,25 @@
   width: 70%;
   margin: 0 auto;
 }
+
+.page-title {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.load-button {
+  position: absolute;
+  opacity: 0.7;
+  top: 15px;
+  left: 50%;
+  transform: translate(0, -50%);
+  width: 100px;
+  height: 30px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.load-button:focus {
+  outline: none;
+}

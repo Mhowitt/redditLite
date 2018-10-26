@@ -19,6 +19,7 @@ class Header extends Component {
           {' '}
           <SearchBar onChange={this.props.onChange} />
         </div>
+        <button className="load-button">load more...</button>
       </div>
     );
   }
