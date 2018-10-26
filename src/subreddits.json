@@ -1,0 +1,64 @@
+{
+  "subreddits": [
+    {
+      "name": "r/javascript",
+      "link": "javascript",
+      "thumbnail": "https://a.thumbs.redditmedia.com/_rDxXoW5xCb6-aM_CELIcZ3Xg2y--eDkXilN9Z0HN30.png",
+      "description": "All about the JavaScript programming language!"
+    },
+    {
+      "name": "r/IWantToLearn",
+      "link": "IWantToLearn",
+      "thumbnail": "",
+      "description": "Have you ever wanted to learn a martial art, or to play the guitar, or how to program a computer? Have you had difficulty figuring out where to start, what path to take or just wanted some advice to get you to the next level?\n\nWell, that's what /r/IWantToLearn is all about!\n\nTell our community what you want to learn, and let those who came before you help guide you towards success!"
+    },
+    {
+      "name": "r/solotravel",
+      "link": "solotravel",
+      "thumbnail": "https://s.redditmedia.com/t5_2rxxm/styles/communityIcon_xq3wja7p41m01.jpg?fm=pjpg&amp;s=c42c549ed734136a99a62ad0d29f67ce",
+      "description": "A place for all of those interested in solo travel to share their experiences and stories! "
+    },
+    {
+      "name": "r/UnsentLetters",
+      "link": "UnsentLetters",
+      "thumbnail": "",
+      "description": "A place to write a letter you don't intend to send."
+    },
+    {
+      "name": "r/NeverTellMeTheOdds",
+      "link": "NeverTellMeTheOdds",
+      "thumbnail": "https://styles.redditmedia.com/t5_38iwx/styles/bannerBackgroundImage_h5g62pgswsi01.jpg",
+      "description": "Nearly impossible feats of achievement, those with great degree of difficulty or incredible odds. "
+    },
+    {
+      "name": "r/ChildrenFallingOver",
+      "link": "ChildrenFallingOver",
+      "thumbnail": "https://b.thumbs.redditmedia.com/2VR6DEWccOqCgXv6vp8Fv0Pcnoloyq2PXVOXqAYklcE.png",
+      "description": "It's hilarious to see little humans topple over. What more can we say?"
+    },
+    {
+      "name": "r/AnimalsBeingBros",
+      "link": "AnimalsBeingBros",
+      "thumbnail": "https://b.thumbs.redditmedia.com/kYZCkffvs7uJHLRfXXYwxggon-91MsCHkdFXlaMq3Us.png",
+      "description": "A place for sharing videos, gifs, and images of animals being bros."
+    },
+    {
+      "name": "r/Tinder",
+      "link": "Tinder",
+      "thumbnail": "https://styles.redditmedia.com/t5_2w7mz/styles/communityIcon_jmyuhs81jl211.png",
+      "description": "A community for discussing the online dating app Tinder. Sharing conversations, reviewing profiles and more."
+    },
+    {
+      "name": "r/Nostalgia",
+      "link": "Nostalgia",
+      "thumbnail": "https://b.thumbs.redditmedia.com/55r8R6bTaCHFzqWfJ42LnMMC3LTK6B4c1Nc7D6BGPIM.png",
+      "description": "Nostalgia is often triggered by something reminding you of a happier time. Whether it's an old commercial or a book from your past, it belongs in /r/nostalgia. Here we can take pleasure in reminiscing about the good ol' days... times we shared with loved ones, both humorous and sad. So grab your Pogs, Surge cans and Thriller cassettes, and we'll see you in /r/nostalgia!"
+    },
+    {
+      "name": "r/insanepeoplefacebook",
+      "link": "insanepeoplefacebook",
+      "thumbnail": "",
+      "description": "Do you have any insane people on your social media feeds? Post screenshots here!"
+    }
+  ]
+}

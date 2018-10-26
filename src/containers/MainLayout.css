@@ -14,10 +14,16 @@
 
 .flex-column.side-content {
   width: 20%;
+  text-align: left;
 }
 
 .flex-column.main-content {
   width: 80%;
   justify-content: center;
   border-left: 1px solid darkblue;
+  height: 100vh;
+}
+
+body {
+  padding: 0;
 }

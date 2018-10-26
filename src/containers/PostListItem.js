@@ -35,9 +35,10 @@ export default class PostListItem extends Component {
           </Link>{' '}
           <span>
             Posted By{' '}
-            <Link to={`${baseSubUrl}users/${post.author}`}>{`u/${
-              post.author
-            }`}</Link>
+            <a
+              href={`${baseSubUrl}user/${post.author}`}
+              // to={`${baseSubUrl}users/${post.author}`}
+            >{`u/${post.author}`}</a>
           </span>
           <span className="posted-date">{this.renderTime()}</span>
         </div>

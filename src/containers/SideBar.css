@@ -1,0 +1,9 @@
+.subreddit-list {
+  list-style: none;
+  width: 100%;
+  padding-left: 5%;
+}
+
+.subreddit-list-item {
+  margin-bottom: 5%;
+}
