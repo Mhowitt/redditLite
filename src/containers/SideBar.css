@@ -6,4 +6,15 @@
 
 .subreddit-list-item {
   margin-bottom: 5%;
+  text-align: center;
+}
+
+div.subreddit-underline:hover {
+  border-bottom: 3px solid darkblue;
+  width: 50%;
+  text-align: center;
+}
+
+.subreddit-link:hover {
+  cursor: pointer;
 }

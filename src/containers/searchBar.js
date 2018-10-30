@@ -8,6 +8,13 @@ export default class SearchBar extends Component {
     }
   }
 
+  handleSubmit = e => {
+    if (e.keyCode === 13) {
+      e.preventDefault();
+      this.props.submitSearch();
+    }
+  };
+
   render() {
     return (
       <div className="a-search-box-container ">
@@ -21,6 +28,7 @@ export default class SearchBar extends Component {
           ref={input => {
             this.inputRef = input;
           }}
+          onKeyDown={this.handleSubmit}
         />
       </div>
     );

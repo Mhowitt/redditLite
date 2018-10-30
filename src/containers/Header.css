@@ -3,6 +3,7 @@
   flex-direction: column;
   width: 100vw;
   position: fixed;
+  background: #ffffff;
 }
 
 .topChrome-primary {

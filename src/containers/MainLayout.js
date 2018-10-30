@@ -9,7 +9,12 @@ import SideBar from './SideBar.js';
 class MainLayout extends Component {
   constructor(props) {
     super(props);
-    this.state = { posts: null, searchTerm: '', loadMore: false };
+    this.state = {
+      posts: null,
+      searchTerm: '',
+      loadMore: false,
+      scrollToTop: false
+    };
   }
 
   componentDidMount = () => {
@@ -24,6 +29,11 @@ class MainLayout extends Component {
     this.setState({ ...this.state, searchTerm: value });
   };
 
+  submitSearch = () => {
+    this.renderPosts(this.state.searchTerm);
+    this.props.history.push(`/subreddit/${this.state.searchTerm}`);
+  };
+
   renderPosts = data => {
     apiCall(data).then(newData => {
       let posts = newData;
@@ -36,11 +46,12 @@ class MainLayout extends Component {
         <Header
           onChange={this.handleSearchTerm}
           loadMore={this.state.loadMore}
+          submitSearch={this.submitSearch}
         />
 
         <div className="main-layout">
           <div className="flex-column side-content">
-            <SideBar />
+            <SideBar renderPosts={this.renderPosts} {...this.props} />
           </div>
           <div className="flex-column main-content">
             <PostsList

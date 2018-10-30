@@ -9,15 +9,13 @@ class Header extends Component {
         <nav className="topChrome-primary">
           {/* <button>Menu</button> */}
           <span className="navbar-brand">RedditLite</span>
-          <ul className="pull-right">
-            <span className="profile-menu">
-              <button>Profile</button>
-            </span>
-          </ul>
         </nav>
         <div className="topChrome-secondary">
           {' '}
-          <SearchBar onChange={this.props.onChange} />
+          <SearchBar
+            onChange={this.props.onChange}
+            submitSearch={this.props.submitSearch}
+          />
         </div>
         {this.props.loadMore ? (
           <button className="load-button">load more...</button>

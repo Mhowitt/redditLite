@@ -5,10 +5,6 @@ import { compareTimes } from '../helper';
 import './PostListItem.css';
 
 export default class PostListItem extends Component {
-  // static propTypes = {
-  //   prop: PropTypes
-  // }
-
   renderTime = () => {
     let difference = compareTimes(this.props.post.date.created_utc);
     if (difference < 1) {
@@ -17,6 +13,46 @@ export default class PostListItem extends Component {
       return 'an hour ago';
     } else {
       return `${difference} hours ago`;
+    }
+  };
+  //render what kind of post it is and the media type
+  renderPost = postInfo => {
+    if (postInfo.is_video === true) {
+      let video = postInfo.media.reddit_video;
+      return (
+        <video
+          src={video.scrubber_media_url}
+          controls
+          muted
+          width={video.width}
+          height={video.height}
+        >
+          Sorry, your browser doesn't support embedded videos.
+        </video>
+      );
+    } else if (postInfo.postType === 'image') {
+      return (
+        <picture>
+          {/* <source srcset={} */}
+          <img src={postInfo.thumbnailInfo.thumbnail} alt="reddit post" />
+        </picture>
+      );
+    } else if (
+      postInfo.preview &&
+      postInfo.preview.reddit_video_preview &&
+      postInfo.preview.reddit_video_preview.is_gif === 'true'
+    ) {
+      return (
+        <video
+          src={postInfo.media.oembed.thumbnail_url}
+          height={postInfo.media.oembed.thumbnail_height}
+          width={postInfo.media.oembed.thumbnail_width}
+          muted
+        >
+          {' '}
+          {postInfo.media.oembed.description}
+        </video>
+      );
     }
   };
 
@@ -44,6 +80,7 @@ export default class PostListItem extends Component {
         </div>
         <div className="lower-half-post">
           <p>{post.title}</p>
+          {this.renderPost(post)}
         </div>
       </div>
     );
