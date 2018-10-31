@@ -37,7 +37,7 @@ class MainLayout extends Component {
   renderPosts = data => {
     apiCall(data).then(newData => {
       let posts = newData;
-      this.setState({ posts });
+      this.setState({ ...this.state, posts: posts });
     });
   };
   render() {
